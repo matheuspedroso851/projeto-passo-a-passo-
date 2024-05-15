@@ -7,6 +7,23 @@
 
 
     <style>
+
+/* Este é o ponto de interrupção e regras CSS para telas com menos de 600px de largura */
+@media screen and (max-width: 600px) {
+    /* Seu CSS para telas pequenas vem aqui */
+}
+
+/* Este é o ponto de interrupção e regras CSS para telas entre 600px e 1200px de largura */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    /* Seu CSS para telas médias vem aqui */
+}
+
+/* Este é o ponto de interrupção e regras CSS para telas com mais de 1200px de largura */
+@media screen and (min-width: 1200px) {
+    /* Seu CSS para telas grandes vem aqui */
+}
+
+
 html{
 scroll-behavior: smooth;
 }
@@ -116,6 +133,7 @@ nav ul li a:hover {
    border: none;
    right: 20px;
    padding: 0;
+   height:fit-content;
 }
 .navegacao-barra {
    display: flex;

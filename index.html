@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+html{
+scroll-behavior: smooth;
+}
+
+body{
+   font-family: Arial, sans-serif;
+          
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            padding-top: 50px;
+        }
+
+        .imagemprincipal  img{
+         width: 1000px;
+        height:100px;
+        
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh; /* Altura total da janela de visualização */
+         margin: auto;
+     }
+      
+        body, html {
+         width:100%;
+         margin: 0;
+       }
+       .search-box {
+         position:flex; /* Posição flutuante */
+         top: 50px; /* Distância do topo da página */
+         right: 20px; /* Distância da direita da página */
+         display:flex;
+         justify-content:center;
+         z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+       }
+       .search-box input[type="text"] {
+         border: 2px solid #ddd;
+         padding: 10px;
+         border-radius: 5px 0 0 5px;
+         outline: none;
+       }
+       .search-box button {
+         border: 2px solid #ddd;
+         border-left: none;
+         padding: 10px;
+         border-radius: 0 5px 5px 0;
+         cursor: pointer;
+         background: #f8f8f8;
+       }
+       .search-box button:hover {
+         background: #e8e8e8;
+       }
+        
+h1 {
+   color: #333;
+   text-align: center;
+   margin: 50px 0;
+
+}
+
+p {
+   color: #666;
+   text-align: center;
+   font-weight: bold;
+}
+
+nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+   margin-left: auto;
+}
+
+nav ul li {
+   display: flex;
+   margin-right:0px;
+   font-size: 16px;
+   transition: font-size 0,10s;
+   margin-left: auto;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #333;
+   font-weight: bold;
+  
+   
+}
+
+nav ul li a:hover {
+   color: #2196F3;
+   font-size: 18px;
+}
+
+
+.redes {
+   font: size 14px; 
+   display: flex;
+   list-style: none;
+   margin: 0;
+   position: fixed;
+   bottom: 0;
+   top: 0;
+   border: none;
+   right: 20px;
+   padding: 0;
+}
+.navegacao-barra {
+   display: flex;
+   align-items: center;
+   background-color: #9fd1f3;
+   box-shadow: 0 8px 10px rgba(0,0,0,0.2); /* Adiciona uma sombra para destacar a nav bar */
+   font-size: medium;
+   font-weight: bolder;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1000; /* Corrigido para ser um número válido */
+ }
+ 
+ /* Remove a lista de estilos e margens/paddings padrão */
+ .navegacao-barra nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex; /* Organiza os itens da lista horizontalmente */
+ }
+ 
+ /* Estilo dos itens da lista */
+ .navegacao-barra nav ul li {
+   padding: 13px; /* Espaçamento interno */
+ }
+ 
+ /* Estilo dos links */
+ .navegacao-barra nav ul li a {
+   text-decoration: none; /* Remove o sublinhado dos links */
+   color: #333; /* Cor do texto */
+ }
+ 
+ /* Efeito ao passar o mouse sobre os links */
+ .navegacao-barra nav ul li a:hover {
+   color: #000; /* Cor do texto ao passar o mouse */
+  
+
+}
+ 
+
+
+
+/*ambiente virtual*/
+
+body {
+            background-color: #9fd1f3;
+       }
+        .sbuit{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+    
+           
+    
+        .titlo{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       /*titulos e subtitulos dos passos*/
+        .passa1{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass2{
+        
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .passa2{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass3{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .passa3{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+/*imagns passo a passo*/
+.imagem1 img {
+       
+        width: 580px;
+        height: 500px;
+    }
+    .imagem2 img {
+        width: 580px;
+        height: 500px;}
+
+        .imagem3 img {
+        width: 580px;
+        height: 500px;}
+
+
+/* videos do passoa a passo*/
+/* Estilos para o vídeo */
+.video-container {
+            position: relative;
+            width: 300px; /* Largura inicial do vídeo */
+            transition: width 0.6s; /* Adiciona uma transição suave */
+        }
+
+        .video-container:hover {
+            width: 400px; /* Largura aumentada quando o mouse passa por cima */
+        }
+
+        /* Estilos para o vídeo (apenas para ilustração) */
+        video {
+            width: 100%;
+            height: auto;
+        }  
+.video{
+           font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    /* Estilos para a caixa de avaliação */
+    .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Torna as estrelas clicáveis */
+        .star {
+            font-size: 24px;
+            color: #FFD700;
+            cursor: pointer; 
+        }
+
+       .seucomet{
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+       }
+             /* Estilos para a caixa de comentário */
+             .comment {
+                position: relative;
+            width: 300px; /* Largura inicial do comentario */
+            transition: width 0.6s; /* Adiciona uma transição suave */
+        }
+
+        .comment:hover {
+            width: 400px; /* Largura aumentada quando o mouse passa por cima */
+        
+            margin-top: 10px;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+    }
+
+        /* Estilos para o botão de envio */
+        .submit-button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #0b7dda;
+        }
+        .button {
+           position: fixed;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:18px;
+            border-radius:4px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:5px;
+            padding-bottom:5px;
+            color:#ffffff;
+            background-color:#060d0e;
+            outline:none;
+            border:none;
+            cursor:pointer;
+            display:inline-block;
+            text-decoration: none;
+            transition: .4s;
+}
+
+.button:hover {
+color:#ffffff;
+
+background-color:#414141;
+
+}
+
+/*Como entrar nas matérias do semestre/curso desejado e acessar conteúdos?*/
+
+.sbuit{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+    
+           
+    
+        .titlo{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       /*titulos e subtitulos dos passos*/
+        .passa1{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass2{
+        
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .passa2{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass3{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .passa3{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+/*imagns passo a passo*/
+.imagem1 img {
+       
+        width: 580px;
+        height: 500px;
+    }
+    .imagem2 img {
+        width: 580px;
+        height: 500px;}
+
+        .imagem3 img {
+        width: 580px;
+        height: 500px;}
+
+
+/* videos do passoa a passo*/
+/* Estilos para o vídeo */
+.video-container {
+            position: relative;
+            width: 300px; /* Largura inicial do vídeo */
+            transition: width 0.6s; /* Adiciona uma transição suave */
+        }
+
+        .video-container:hover {
+            width: 400px; /* Largura aumentada quando o mouse passa por cima */
+        }
+
+        /* Estilos para o vídeo (apenas para ilustração) */
+        video {
+            width: 100%;
+            height: auto;
+        }  
+.video{
+           font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    /* Estilos para a caixa de avaliação */
+    .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Torna as estrelas clicáveis */
+        .star {
+            font-size: 24px;
+            color: #FFD700;
+            cursor: pointer; 
+        }
+
+       .seucomet{
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+       }
+             /* Estilos para a caixa de comentário */
+             .comment {
+                position: relative;
+            width: 300px; /* Largura inicial do comentario */
+            transition: width 0.6s; /* Adiciona uma transição suave */
+        }
+
+        .comment:hover {
+            width: 400px; /* Largura aumentada quando o mouse passa por cima */
+        
+            margin-top: 10px;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+    }
+
+        /* Estilos para o botão de envio */
+        .submit-button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #0b7dda;
+        }
+        
+        .button {
+           position: fixed;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:18px;
+            border-radius:4px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:5px;
+            padding-bottom:5px;
+            color:#ffffff;
+            background-color:#060d0e;
+            outline:none;
+            border:none;
+            cursor:pointer;
+            display:inline-block;
+            text-decoration: none;
+            transition: .4s;
+}
+
+.button:hover {
+color:#ffffff;
+
+background-color:#414141;
+
+}
+
+
+
+
+/*unidades*/
+
+.sbuit{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+    
+           
+    
+        .titlo{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+       /*titulos e subtitulos dos passos*/
+        .passa1{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass2{
+        
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .passa2{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .primeiro_pass3{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .passa3{
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+/*imagns passo a passo*/
+.imagem1 img {
+       
+        width: 580px;
+        height: 500px;
+    }
+    .imagem2 img {
+        width: 580px;
+        height: 500px;}
+
+        .imagem3 img {
+        width: 580px;
+        height: 500px;}
+
+
+/* videos do passoa a passo*/
+/* Estilos para o vídeo */
+.video-container {
+            position: relative;
+            width: 300px; /* Largura inicial do vídeo */
+            transition: width 0.6s; /* Adiciona uma transição suave */
+        }
+
+        .video-container:hover {
+            width: 400px; /* Largura aumentada quando o mouse passa por cima */
+        }
+
+        /* Estilos para o vídeo (apenas para ilustração) */
+        video {
+            width: 100%;
+            height: auto;
+        }  
+.video{
+           font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    /* Estilos para a caixa de avaliação */
+    .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Torna as estrelas clicáveis */
+        .star {
+            font-size: 24px;
+            color: #FFD700;
+            cursor: pointer; 
+        }
+
+       .seucomet{
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+       }
+             /* Estilos para a caixa de comentário */
+             .comment {
+                position: relative;
+            width: 300px; /* Largura inicial do comentario */
+            transition: width 0.6s; /* Adiciona uma transição suave */
+        }
+
+        .comment:hover {
+            width: 400px; /* Largura aumentada quando o mouse passa por cima */
+        
+            margin-top: 10px;
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+    }
+/*<p>Material didatico:Material didatico é um PDF com o conteúdo da material/aula.</p>
+<p>video aula: A video aula sâo aulas gravadas pela propria instituição!</p>
+<p>AS-:A as-unidades são <em>"atividades" </em>do conteudo das aulas gravadas e os material didatico!</p>
+<p>cada atividade aquivale 0,68 que o total equivalente a 4,08 da sua nota</p>
+<br></div>
+        /* Estilos para o botão de envio */
+        .submit-button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background: #0b7dda;
+        }
+        
+        .button {
+           position: fixed;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:18px;
+            border-radius:4px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:5px;
+            padding-bottom:5px;
+            color:#ffffff;
+            background-color:#060d0e;
+            outline:none;
+            border:none;
+            cursor:pointer;
+            display:inline-block;
+            text-decoration: none;
+            transition: .4s;
+}
+
+.button:hover {
+color:#ffffff;
+
+background-color:#414141;
+
+}
+    
+
+    </style>
+</head>
+<body>
+
+
+    <div class="navegacao-barra">
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <!-- redes sociais -->
+          </ul>
+          <div class="redes">
+            <ul>
+              <li><a href="https://www.instagram.com/matheus_pedroso_/"><img src="img/instagram (1).png" alt="Instagram Icon"></a></li>
+              <li><a href="https://github.com/matheuspedroso851"><img src="img/github.png" alt="GitHub Icon"></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <!--barra de pesquisa!!--> 
+        <div class="search-box">
+        <input type="text" placeholder="Digite sua pesquisa...">
+        <button type="submit">Buscar</button>
+      </div>
+      </div>
+      <!-- ////////////////////////////-->
+
+    
+    <h1>Tutorial para Alunos Ingressantes</h1>
+    <p>Este site foi desenvolvido para ajudar alunos com dúvidas na plataforma Blackboard (área de estudo).</p>
+   
+       <br>
+    <div class="questoes">
+       <nav>
+        <ul>
+            <li><a href="#passa1ambv">Como entrar no ambiente virtual?</a></li>
+            <li><a href="#passa1matcurso">Como entrar nas matérias do semestre/curso desejado e acessar conteúdos?</a></li>
+            <li><a href="#passa1unidis">Como funcionam as unidades?</a></li>
+           <br>
+           <br>
+        </ul>
+    </nav>
+    </div>
+    </div>
+    
+    
+    <div id="passa1ambv"></div>
+    <div class="titlo">
+        <h1>Como entrar no ambiente virtual?</h1>
+        <div class="sbuit"> <p>Insira suas credenciais fornecidas pela instituição (geralmente seu ID de estudante e senha)<br>
+          <br>  <i>ID = ex:email,telefone ou rgm</i>
+        </p>
+        </div>
+    </div>
+    <br>
+
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- passo um!(1)-->
+    <div class="passa1">
+        <P>1° passo</P>
+    </div>
+    <div class="primeiro_pass">
+        <p>O aluno deverá entrar no "ambiente virtual" no canto inferior esquerdo mostrado na imagem abaixo.</p>
+        <div class="imagem1">
+            <img src="img/Captura de tela acesso virtual 230944.png">
+        </div>
+    </div>
+   
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- passo dois(2)-->
+<div class="passa2">
+    <p>2° passo</p>
+</div>
+<div class="primeiro_pass2">
+    <p>irá no link circulado conforme mostrado na imagem.</p>
+</div>
+<div class="imagem2">
+    <img src="img/Captura de tela link para o blackboard 50.png">
+</div>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- passo tres(3)-->
+<div class="passa3">
+    <p>3° passo</p>
+</div>
+<div class="primeiro_pass3">
+    <p>parabens!, voce entrou no seu ambiente virtual!! </p>
+</div>
+<div class="imagem3">
+    <img src="img/Captura de tela entrou no ambiente 231929.png">
+</div>
+<br>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<!--Como entrar nas matérias do semestre/curso desejado-->
+
+<div id="passa1matcurso"></div>
+    <div class="titlo">
+        <h1>Como entrar nas matérias do semestre/curso desejado</h1>
+        <div class="sbuit"> <p>Insira suas credenciais fornecidas pela instituição (geralmente seu ID de estudante e senha)<br>
+          <br>  <i>ID = ex:email,telefone ou rgm</i>
+        </p>
+        </div>
+    </div>
+    <br>
+
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- passo um!(1)-->
+    <div class="passa1">
+        <P>1° passo</P>
+    </div>
+    <div class="primeiro_pass">
+        <p>O aluno deverá entrar no "cursos" mostrado na imagem abaixo.</p>
+        <div class="imagem1">
+            <img src="img/Captura de tela entrou no ambiente 231929.png">
+        </div>
+    </div>
+   
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- passo dois(2)-->
+<div class="passa2">
+    <p>2° passo</p>
+</div>
+<div class="primeiro_pass2">
+    <p>parabens!, voce ja entrou nas disciplinas semestral </p>
+</div>
+<div class="imagem2">
+    <img src="img/Captura de telaenttrou cursos34416.png">
+</div>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<!--Como funcionam as unidades?-->
+
+<div id="passa1unidis"></div>
+<div class="titlo">
+    <h1>Como funcionam as unidades?</h1>
+    <div class="sbuit"> <p>Insira suas credenciais fornecidas pela instituição (geralmente seu ID de estudante e senha)<br>
+      <br>  <i>ID = ex:email,telefone ou rgm</i>
+    </p>
+    </div>
+</div>
+<br>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- passo um!(1)-->
+<div class="passa1">
+    <P>1° passo</P>
+</div>
+<div class="primeiro_pass">
+    <p>cada materia sao compostas por 6 unidades.</p>
+    <div class="imagem1">
+        <img src="img/Captura de tela mostrando unids-05-03 000703.png">
+    </div>
+</div>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- passo dois(2)-->
+<div class="passa2">
+<p>2° passo</p>
+</div>
+
+<div class="imagem2">
+<img src="img/Captura de tela funcional unid-05-03 001256.png">
+<div class="primeiro_pass2">
+<p>Material didatico:Material didatico é um PDF com o conteúdo da material/aula.</p>
+<p>video aula: A video aula sâo aulas gravadas pela propria instituição!</p>
+<p>AS-:A as-unidades são <em>"atividades" </em>do conteudo das aulas gravadas e os material didatico!</p>
+<p>cada atividade aquivale 0,68 que o total equivalente a 4,08 da sua nota</p></div>
+<br></div>
+</div></div>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- passo tres(3)-->
+
+<br>
+
+
+
+<div class="seucomet"><p>deixe sua nota aqui em baixo</p>
+</div>
+<!-- caixa de comentarop      -->
+<div class="rating">
+    <span class="star"onclick="rate(1)">&#9733;</span>
+    <span class="star"onclick="rate(2)">&#9733;</span>
+    <span class="star"onclick="rate(3)">&#9733;</span>
+    <span class="star"onclick="rate(4)">&#9733;</span>
+    <span class="star"onclick="rate(5)">&#9733;</span>
+</div>
+<form class="example" action="action_page.php">
+    <textarea class="comment" placeholder="Deixe seu comentário aqui..." name="comment"></textarea>
+    <button class="submit-button" type="submit">Enviar</button>
+</form>
+
+<br>
+
+
+</body>
+</html>

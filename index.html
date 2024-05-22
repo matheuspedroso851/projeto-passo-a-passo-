@@ -658,6 +658,37 @@ background-color:#414141;
 }
     
 
+form {
+                              display: flex;
+                                flex-direction: column;
+                                  gap: 10px;
+                                  
+                                  }
+
+                                  label {
+                                    font-weight: bold;
+                                    }
+
+                                    input, textarea {
+                                      width: 300px;
+                                        padding: 5px;
+                                          border: 1px solid #ccc;
+                                            border-radius: 5px;
+                                            }
+
+                                            textarea {
+                                              height: 100px;
+                                              }
+
+                                              input[type="submit"] {
+                                                background-color: #007bff;
+                                                  color: #fff;
+                                                    padding: 5px 10px;
+                                                      border: none;
+                                                        border-radius: 5px;
+                                                          cursor: pointer;
+                                                          }
+
     </style>
 </head>
 <body>
@@ -841,20 +872,27 @@ background-color:#414141;
 
 
 
-<div class="seucomet"><p>deixe sua nota aqui em baixo</p>
+<div class="seucomet"><p>deixe comentario aqui</p>
 </div>
 <!-- caixa de comentarop      -->
-<div class="rating">
-    <span class="star"onclick="rate(1)">&#9733;</span>
-    <span class="star"onclick="rate(2)">&#9733;</span>
-    <span class="star"onclick="rate(3)">&#9733;</span>
-    <span class="star"onclick="rate(4)">&#9733;</span>
-    <span class="star"onclick="rate(5)">&#9733;</span>
-</div>
-<form class="example" action="action_page.php">
-    <textarea class="comment" placeholder="Deixe seu comentário aqui..." name="comment"></textarea>
-    <button class="submit-button" type="submit">Enviar</button>
-</form>
+
+<form action="https://formsubmit.co/33b517e7d443764b966d3652075c8214" method="POST">
+    <label for="nome">Nome:</label>
+      <input type="text" id="name" name= "name" required>
+        <br>
+                <label for="email">E-mail:</label>
+                  <input type="email" id="email" name= "email" required>
+                    <br>
+                      <label for="comentarios">Comentários:</label>
+                        <textarea id="comentarios" name= "message" required></textarea>
+                          <br>
+                            <input type="submit" value="Enviar">
+                            </form>
+
+
+                          
+                           
+
 
 <br>
 
